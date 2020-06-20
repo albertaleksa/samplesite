@@ -12,10 +12,10 @@
         <h1>Advertisements</h1>
     </header>
     <nav>
-        <a href="{% url 'index' %}">Main</a>
-        <a href="{% url 'add' %}">Add</a>
+        <a href="{% url 'bboard:index' %}">Main</a>
+        <a href="{% url 'bboard:add' %}">Add</a>
         {% for rubric in rubrics %}
-        <a href="{% url 'by_rubric' rubric.pk %}">{{ rubric.name }}</a>
+        <a href="{% url 'bboard:by_rubric' rubric.pk %}">{{ rubric.name }}</a>
         {% endfor %}
     </nav>
     <section>
